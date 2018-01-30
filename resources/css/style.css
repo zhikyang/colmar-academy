@@ -29,7 +29,6 @@ p{
 
 @media only screen and (max-width: 770px) and (min-width: 500px), (max-device-width: 770px) and (min-device-width: 500px){
 	html {
-		font-size: 12px;
 	}
 }
 
@@ -69,14 +68,24 @@ nav span {
 
 @media only screen and (max-width: 500px), (max-device-width: 500px){
 
-	#academy, #colmar, nav span {
+	header {
+		position: fixed;
+		top: 0;
+		height: 5rem;
+		background-color: white;
+		width: 100%;
+	}
+	#academy, #colmar, nav {
 		display: none;
 	}
 	.icon {
 		display: inline-block;
 	}
 	.logo {
-		justify-content: space-between;
+		justify-content: space-around;
+	}
+	.logo img {
+		height: 4rem;
 	}
 }
 
@@ -132,6 +141,7 @@ nav span {
 @media only screen and (max-width: 500px) , (max-device-width: 500px){
 	.banner {
 		flex-direction: column;
+		margin-top: 5rem;
 	}
 	#banner-image, #banner-messeges {
 		width: 100%;
