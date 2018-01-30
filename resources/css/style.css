@@ -1,0 +1,406 @@
+/**-- There are 3 sections: header (logo & nav), main(banner, intro, curriculum & exhibit), and footer(copyright & legal) **/
+
+html {
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	padding: 2rem 0;
+	font-size: 2.5rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+
+}
+
+p{
+	line-height: 1.5rem;
+	color: grey;
+}
+
+/*------------tablet view --------------*/
+
+@media only screen and (max-width: 770px) and (min-width: 500px){
+	html {
+		font-size: 12px;
+	}
+}
+
+/***************** Header style************************/
+
+header {
+	display: flex;
+	align-items: center;
+	height: 4rem;
+	padding: 0 1.5rem;
+}
+
+.logo {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+.logo img {
+	height: 3rem;
+}
+
+nav span {
+	margin-left: 1rem;
+}
+
+#academy {
+	color: lightgrey;
+}
+
+.icon {
+	display: none;
+}
+
+/*------------mobile view --------------*/
+
+@media only screen and (max-width: 500px) {
+
+	#academy, #colmar, nav span {
+		display: none;
+	}
+	.icon {
+		display: inline-block;
+	}
+	.logo {
+		justify-content: space-between;
+	}
+}
+
+
+/***************** main-banner style************************/
+
+.banner {
+	display: flex;
+	background-color: lightgrey;
+}
+
+#banner-image {
+	width: 60%;
+	padding: 2rem 1.5rem;
+}
+
+#banner-image img {
+	width: 100%;
+}
+
+#banner-messeges {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 40%;
+}
+
+#banner-messeges h1 {
+	font-size: 2.5em;
+} 
+
+#banner-messeges h2{
+	font-size: 1.5em;
+}
+
+.banner-messege {
+	margin-bottom: 1.5rem;
+	margin-left: 1rem;	
+}
+
+#starthere-button {
+	display: flex;
+	justify-content: center;
+	background-color: grey;
+	padding: 0.5rem 0rem;
+	color: white;
+	margin-right: 4.5rem;
+	margin-left: 1rem;
+}
+
+/*------------mobile view --------------*/
+
+@media only screen and (max-width: 500px) {
+	.banner {
+		flex-direction: column;
+	}
+	#banner-image, #banner-messeges {
+		width: 100%;
+	}
+	#banner-image {
+		padding: 0 0;
+	}
+	#banner-messeges {
+		margin: 2rem 0rem;
+	}
+	.banner-messege {
+		margin: 0 1rem;
+	}
+	#starthere-button {
+		padding: 1rem 0;
+		margin: 0 1rem;
+		margin-top: 1.5rem;
+	}
+
+}
+
+/***************** intro style************************/
+
+.intro {
+	display: flex;
+}
+
+#intro-article {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	padding: 2rem 1.5rem;
+}
+
+#intro-article figure img {
+	width: 100%;
+}
+
+
+#intro-infos {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	padding-top: 1rem;
+	border-left: 1px solid lightgrey;
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	padding: 1rem 1rem;
+	border: 1px solid lightgrey;
+
+}
+
+.info figure {
+	width: 35%;
+}
+
+.info figure img{
+	width: 100%
+}
+
+.info article {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-left: 1rem;
+	width: 65%;
+}
+
+.info article p{
+	margin: 1rem 0; 
+}
+
+#specialmention {
+	font-weight: bold;
+	margin-top: 2rem;
+}
+.mobile {
+	display: none;
+}
+
+/*------------mobile view --------------*/
+
+@media only screen and (max-width: 500px) {
+	#intro-article, .desktop{
+		display: none;
+	}
+	#intro-infos, .info figure{
+		width: 100%;  
+	} 
+	.mobile {
+		display: inline-block;
+	}
+
+	.info {
+		flex-direction: column;
+		align-items: flex-start;
+		border: none;
+	}
+
+	.info article {
+		width: 100%;
+		padding-top: 1rem;
+	}
+}
+
+/***************** curriculum style************************/
+
+
+.curriculum {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 4.5rem;
+	align-items: center;
+	background-color: lightgrey;
+}
+
+.classes {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.class {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	background-color: white;
+
+}
+
+.class figure img {
+	width: 100%;
+}
+
+.class .description {
+	padding: 1rem 1rem;
+	padding-bottom: 1.5rem;
+}
+
+.class .description p:first-child {
+	padding-bottom: 1rem;
+}
+
+.class .description p:nth-child(2){
+	padding: 0.5rem 0;
+}
+
+/*------------mobile view --------------*/
+
+@media only screen and (max-width: 500px) {
+	.curriculum {
+		background-color: white;
+		padding: 2rem 1rem;
+		border: 1px solid lightgrey;
+	}
+	.class figure, .class .description p{
+		display: none;
+	}
+	.classes {
+		width: 100%;
+		flex-direction: column;
+		align-self: flex-start;
+		margin: 0;
+	}
+	.class {
+		width: 100%;
+		background-color: lightgrey;
+		margin-bottom: 0.5rem;
+
+	}
+
+}
+
+/***************** Thesis style************************/
+
+.exhibit {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	padding-left: 1.5rem;
+	padding-bottom: 2rem; 
+}
+
+.past-projects{
+	display: flex;
+
+}
+
+#project-urban {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin-right: 1.5rem;
+}
+
+#project-urban video{
+	width: 100%;
+}
+
+#other-projects{
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+}
+
+.project {
+	display: flex;
+	padding: 1rem;
+	align-items: center;
+}
+
+.project figure {
+	width: 35%;
+	height: auto;
+}
+
+.project figure img {
+	width: 100%;
+}
+
+.project .description {
+	margin-left: 1rem;
+	width: 65%;
+	line-height: 2rem;
+}
+
+/*------------mobile view --------------*/
+
+@media only screen and (max-width: 500px) {
+
+	#other-projects, #project-urban .description{
+		display: none;
+	}
+	#project-urban {
+		width: 100%;
+	}
+	.exhibit, #project-urban{
+		padding-left: 0;
+		margin-right: 0;
+	}
+
+}
+
+/***************** Footer style************************/
+
+footer {
+	display: flex;
+	padding: 1.5rem 1rem;
+	align-items: center;
+}
+#copyright {
+	flex-grow: 1;
+}
+#legal span{
+	margin-left: 1rem;
+	
+
+}
+/*------------mobile view --------------*/
+
+@media only screen and (max-width: 500px) {
+	#legal {
+		display: none;
+	}
+}
+
+
+
+
